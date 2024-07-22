@@ -27,13 +27,15 @@ const params = Astro.params;
 
 <BaseLayout title={"Algorithm - " + params.tag} sideBarActiveItemID="algorithm">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog - {params.tag}</div>
+    <div class="text-3xl w-full font-bold">Algorithm - {params.tag}</div>
   </div>
   {
     page.data.length === 0 ? (
       <div class="bg-base-200 border-l-4 border-secondary w-full p-4 min-w-full">
         <p class="font-bold">Sorry!</p>
-        <p>There are no blog posts to show at the moment. Check back later!</p>
+        <p>
+          There are no algorithm posts to show at the moment. Check back later!
+        </p>
       </div>
     ) : (
       <ul>

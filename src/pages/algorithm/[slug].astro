@@ -1,12 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content"
-import type { BlogSchema } from "../../content/config";
-import PostLayout from "../../layouts/PostLayout.astro";
-import createSlug from "../../lib/createSlug"
+import type { CollectionEntry } from "astro:content";
+import type { AlgorithmSchema } from "../../content/config";
+import AlgorithmLayout from "../../layouts/AlgorithmLayout.astro";
+import createSlug from "../../lib/createSlug";
 
 export async function getStaticPaths() {
-  const postEntries = await getCollection("blog");
+  const postEntries = await getCollection("algorithm");
   return postEntries.map((entry) => ({
     params: { slug: createSlug(entry.data.title, entry.slug) },
     props: { entry },
@@ -14,15 +14,15 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  entry: CollectionEntry<"blog">;
+  entry: CollectionEntry<"algorithm">;
 }
 
 const { entry } = Astro.props;
-const post: BlogSchema = entry.data;
+const post: AlgorithmSchema = entry.data;
 const { Content } = await entry.render();
 ---
 
-<PostLayout
+<AlgorithmLayout
   title={post.title}
   description={post.description}
   pubDate={post.pubDate}
@@ -32,4 +32,4 @@ const { Content } = await entry.render();
   tags={post.tags}
 >
   <Content />
-</PostLayout>
+</AlgorithmLayout>
