@@ -1,10 +1,10 @@
 ---
-title: "Demo Post 3"
+title: "Blog Template"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 pubDate: "Sep 12 2022"
-heroImage: "/post_img.webp"
+heroImage: "/images/blog/blog-logo.webp"
 badge: "Demo badge"
-tags: ["rust","tokio"]
+tags: ["rust", "tokio"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
