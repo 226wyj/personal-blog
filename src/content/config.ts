@@ -28,16 +28,19 @@ const storeSchema = z.object({
   heroImage: z.string().optional(),
 });
 
-export type AlgorithmSchema = z.infer<typeof blogSchema>;
 export type BlogSchema = z.infer<typeof blogSchema>;
+export type AlgorithmSchema = z.infer<typeof blogSchema>;
+export type systemDesignSchema = z.infer<typeof blogSchema>;
 export type StoreSchema = z.infer<typeof storeSchema>;
 
-const algorithmCollection = defineCollection({ schema: blogSchema });
 const blogCollection = defineCollection({ schema: blogSchema });
+const algorithmCollection = defineCollection({ schema: blogSchema });
+const architectureCollection = defineCollection({ schema: blogSchema });
 const storeCollection = defineCollection({ schema: storeSchema });
 
 export const collections = {
-  algorithm: algorithmCollection,
   blog: blogCollection,
+  algorithm: algorithmCollection,
+  architecture: architectureCollection,
   store: storeCollection,
 };
