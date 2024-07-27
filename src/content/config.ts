@@ -29,8 +29,6 @@ const storeSchema = z.object({
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;
-export type AlgorithmSchema = z.infer<typeof blogSchema>;
-export type systemDesignSchema = z.infer<typeof blogSchema>;
 export type StoreSchema = z.infer<typeof storeSchema>;
 
 const blogCollection = defineCollection({ schema: blogSchema });
